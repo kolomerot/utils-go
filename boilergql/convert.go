@@ -416,8 +416,9 @@ func NullDotIntToPointerInt(v null.Int) *int {
 	return v.Ptr()
 }
 
-func NullDotInt8ToPointerInt(v null.Int8) *int8 {
-	return v.Ptr()
+func NullDotInt8ToPointerInt(v null.Int8) *int {
+	i := null.NewInt(Int8ToInt(v.Int8), v.Valid)
+	return i.Ptr()
 }
 
 func IntToInt8(v int) int8 {

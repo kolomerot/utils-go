@@ -1,4 +1,4 @@
-module github.com/web-ridge/utils-go/api/v3
+module github.com/kolomerot/utils-go/api/v3
 
 go 1.14
 

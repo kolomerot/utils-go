@@ -416,6 +416,10 @@ func NullDotIntToPointerInt(v null.Int) *int {
 	return v.Ptr()
 }
 
+func NullDotInt8ToPointerInt(v null.Int8) *int8 {
+	return v.Ptr()
+}
+
 func IntToInt8(v int) int8 {
 	return int8(v)
 }
@@ -560,6 +564,15 @@ func PointerIntToNullDotInt16(v *int) null.Int16 {
 	val := null.Int16{}
 	if v != nil {
 		val.SetValid(int16(*v))
+	}
+
+	return val
+}
+
+func PointerIntToNullDotInt8(v *int) null.Int8 {
+	val := null.Int8{}
+	if v != nil {
+		val.SetValid(int8(*v))
 	}
 
 	return val
